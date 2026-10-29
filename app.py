@@ -62,18 +62,18 @@ if page == "1. Homepage / Overview":
     with col1:
         st.subheader("📌 Project Objectives")
         st.markdown(
-            "* **Acquire & Prepare**: Utilize the UCI Concrete Slump Test dataset (103 observations)[cite: 1].\n"
-            "* **Develop Model**: Train a Multiple Linear Regression model on 7 concrete mix constituents[cite: 1].\n"
-            "* **Evaluate Performance**: Assess accuracy using MAE, RMSE, and $R^2$ metrics[cite: 1].\n"
-            "* **Deploy Web App**: Provide an interactive interface for real-time engineering estimations[cite: 1]."
+            "* **Acquire & Prepare**: Utilize the UCI Concrete Slump Test dataset (103 observations).\n"
+            "* **Develop Model**: Train a Multiple Linear Regression model on 7 concrete mix constituents.\n"
+            "* **Evaluate Performance**: Assess accuracy using MAE, RMSE, and $R^2$ metrics.\n"
+            "* **Deploy Web App**: Provide an interactive interface for real-time engineering estimations."
         )
     with col2:
         st.subheader("⚙️ System Workflow")
         st.markdown(
-            "1. **Dataset Acquisition**: Raw laboratory mix data ingestion[cite: 2].\n"
-            "2. **Data Preprocessing**: Feature selection and 80:20 train-test splitting[cite: 2].\n"
-            "3. **Model Training**: Fitting coefficients via Ordinary Least Squares (OLS)[cite: 2].\n"
-            "4. **Interactive Prediction**: Instant calculation for custom user mix proportions[cite: 2]."
+            "1. **Dataset Acquisition**: Raw laboratory mix data ingestion.\n"
+            "2. **Data Preprocessing**: Feature selection and 80:20 train-test splitting.\n"
+            "3. **Model Training**: Fitting coefficients via Ordinary Least Squares (OLS).\n"
+            "4. **Interactive Prediction**: Instant calculation for custom user mix proportions."
         )
 
 # ==========================================
@@ -116,9 +116,9 @@ elif page == "2. Input Form & Prediction":
             
             st.subheader("4. Brief Explanation of Result")
             st.markdown(
-                f"* **Interpreting the Output**: The estimated slump of **{prediction:.2f} cm** indicates the expected workability and subsidence of the fresh concrete mixture after removing the standard slump cone[cite: 1].\n"
+                f"* **Interpreting the Output**: The estimated slump of **{prediction:.2f} cm** indicates the expected workability and subsidence of the fresh concrete mixture after removing the standard slump cone.\n"
                 f"* **Ingredient Influence**: Water content and superplasticizer heavily drive workability upwards, while high aggregate and cement proportions adjust paste consistency.\n"
-                f"* **Engineering Note**: This prediction provides a fast preliminary estimate to support mix design, but should always be validated via standard ASTM C143 laboratory slump tests before field placement[cite: 1, 2]."
+                f"* **Engineering Note**: This prediction provides a fast preliminary estimate to support mix design, but should always be validated via standard ASTM C143 laboratory slump tests before field placement."
             )
         except ValueError:
             st.error("Please enter valid numerical values for all ingredient fields.")
@@ -154,10 +154,10 @@ elif page == "4. About Dataset & Model":
     st.title("5. About Dataset and Model Page")
     st.subheader("Dataset Description")
     st.markdown(
-        "* **Source**: UCI Machine Learning Repository (Concrete Slump Test Dataset created by I-Cheng Yeh)[cite: 1].\n"
-        "* **Observations**: 103 concrete mix samples[cite: 1].\n"
-        "* **Input Features ($X$)**: Cement, Slag, Fly Ash, Water, Superplasticizer, Coarse Aggregate, Fine Aggregate (measured in $kg/m^3$)[cite: 1, 2].\n"
-        "* **Target Variable ($y$)**: Measured Slump value in centimeters ($cm$)[cite: 2]."
+        "* **Source**: UCI Machine Learning Repository (Concrete Slump Test Dataset created by I-Cheng Yeh).\n"
+        "* **Observations**: 103 concrete mix samples.\n"
+        "* **Input Features ($X$)**: Cement, Slag, Fly Ash, Water, Superplasticizer, Coarse Aggregate, Fine Aggregate (measured in $kg/m^3$).\n"
+        "* **Target Variable ($y$)**: Measured Slump value in centimeters ($cm$)."
     )
     
     st.subheader("Model Evaluation Metrics")
@@ -167,8 +167,8 @@ elif page == "4. About Dataset & Model":
     col3.metric("R-squared ($R^2$)", f"{r2:.3f}")
     
     st.markdown(
-        "* **Multiple Linear Regression (OLS)** minimizes the sum of squared residuals between observed and predicted slump values[cite: 2].\n"
-        "* Metrics are evaluated on a held-out 20% test dataset to ensure generalization[cite: 2]."
+        "* **Multiple Linear Regression (OLS)** minimizes the sum of squared residuals between observed and predicted slump values.\n"
+        "* Metrics are evaluated on a held-out 20% test dataset to ensure generalization."
     )
 
 # ==========================================
@@ -178,8 +178,8 @@ elif page == "5. Program Relevance":
     st.title("6. Program Relevance Page")
     st.markdown(
         "### Relevance to Civil Engineering & Construction Practice\n"
-        "* **Educational Demonstrations**: Helps civil engineering students visualize and understand the complex statistical relationships between concrete mix constituents and workability[cite: 1].\n"
-        "* **Initial Mixture Assessment**: Enables site engineers, quality control inspectors, and concrete plant personnel to quickly perform preliminary evaluations before committing to physical trial batches[cite: 1].\n"
-        "* **Transparency**: Unlike black-box machine learning models, Multiple Linear Regression provides clear, interpretable regression coefficients ($\beta_1, \dots, \beta_7$) that directly quantify how each ingredient impacts concrete slump[cite: 1].\n"
-        "* **Sustainable Construction**: Facilitates optimized mixture screening when incorporating industrial by-products (such as slag and fly ash) to maintain performance while managing environmental impact[cite: 1]."
+        "* **Educational Demonstrations**: Helps civil engineering students visualize and understand the complex statistical relationships between concrete mix constituents and workability.\n"
+        "* **Initial Mixture Assessment**: Enables site engineers, quality control inspectors, and concrete plant personnel to quickly perform preliminary evaluations before committing to physical trial batches.\n"
+        "* **Transparency**: Unlike black-box machine learning models, Multiple Linear Regression provides clear, interpretable regression coefficients ($\beta_1, \dots, \beta_7$) that directly quantify how each ingredient impacts concrete slump.\n"
+        "* **Sustainable Construction**: Facilitates optimized mixture screening when incorporating industrial by-products (such as slag and fly ash) to maintain performance while managing environmental impact."
     )
